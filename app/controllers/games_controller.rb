@@ -40,8 +40,7 @@ class GamesController < ApplicationController
     user_serialized = open(url).read
     # Store word details in a variable
     attempt_details = JSON.parse(user_serialized)
-    # Check if word exists => YES : get length // NO : return score 0
+    # Check if word exists, return result
     return attempt_details['found']
-      # length = attempt_details['length']
   end
 end
